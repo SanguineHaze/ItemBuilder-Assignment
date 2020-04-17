@@ -7,13 +7,18 @@ public class ItemBuilder {
     Material myMaterial = new Material();
 
     public ItemBuilder(){
-        finishItem();
+        buildItem();
     }
 
-    public void finishItem(){
+    public void buildItem(){
         itemType = myItem.getItem();
         materialType = myMaterial.getMaterial();
 
         finishedItem = "You've been given a " + itemType + " made of " + materialType + "!";
+    }
+
+    @Override
+    public String toString(){
+        return finishedItem;
     }
 }
